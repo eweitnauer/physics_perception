@@ -1,0 +1,22 @@
+{
+  "name": "physics-perception",
+  "description": "Javascript library for perceiving features in 2D physical scenes.",
+  "version": "1.0.0",
+  "keywords": [
+    "physics",
+    "box2d",
+    "svg",
+    "perception",
+    "psychology"
+  ],
+  "author": {
+    "name": "Erik Weitnauer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eweitnauer/physics_perception"
+  },
+  "devDependencies": {
+    "uglify-js": "2.x.x"
+  }
+}

@@ -1,0 +1,58 @@
+svg text {
+	font-size: 4px;
+	fill: black;
+	pointer-events: none;
+	-webkit-user-select: none; /* Chrome/Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
+svg .shape {
+	fill: #aaa;
+	stroke: #222;
+}
+
+svg .shape.static {
+	fill: none;
+	stroke: black;
+}
+
+svg .shape.selected {
+	stroke: red;
+	stroke-width: 0.5;
+}
+
+svg {
+	border: 1px solid black;
+	float: left;
+}
+
+.features {
+	float: left;
+	width: 400px;
+}
+
+.feature {
+	width: 78px;
+	float: left;
+	margin: 5px;
+	padding: 10px 5px;
+	border: 1px solid black;
+	background: silver;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.feature.disabled {
+	opacity: 0.33;
+}
+
+.feature.active {
+	background: steelblue;
+}
+
+.feature .key {
+	text-align: center;
+	/*height: 2.5em;*/
+	font-size: 14px;
+}
