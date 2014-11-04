@@ -25,7 +25,8 @@ var pbpSettings = (function() {
 	 SmallAttribute,
 	 LargeAttribute,
 	 MovesAttribute,
-	 MovableUpAttribute].forEach(function (attr) { res.obj_attrs[attr.prototype.key] = attr });
+	 MovableUpAttribute,
+	 IsSupportedAttribute].forEach(function (attr) { res.obj_attrs[attr.prototype.key] = attr });
 	// group attributes
 	[CloseAttribute,
 	 CountAttribute,

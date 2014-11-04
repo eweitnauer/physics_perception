@@ -39,6 +39,7 @@ all: physics-perception.min.js
 	src/features/supports-rel.js \
 	src/features/count-attr.js \
 	src/features/touch-attr.js \
+	src/features/is-supported-attr.js \
 	src/settings.js \
 	src/group-node.js \
 	src/object-node.js \

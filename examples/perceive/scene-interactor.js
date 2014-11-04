@@ -27,7 +27,7 @@ var SceneInteractor = function(physics_scene, scene_node, svg, width) {
   this.show_pos = false;               // displays mouse pos. in world coordinates
   this.playing = false;
   this.drawing = true;
-  this.auto_pause = false;
+  this.auto_pause = true;
   this.init();
   this.draw();
 }

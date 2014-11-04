@@ -6,6 +6,12 @@ dynamic features like stability, distance, collisions, etc. of objects in a
 
 The physical scenes can be loaded from SVGs.
 
+### How to Use ###
+
+The examples load a local svg file which will trigger an access permission violation in most browsers. Instead of opening the examples directly in a browser, start a local server and open them through `localhost`. You could either use the `npm` package `static` or run `python -m SimpleHTTPServer`.
+
+For a description how to create SVG images that can be parsed by the library, please refer to the documentation of [svg2physics](https://github.com/eweitnauer/svg2physics).
+
 ### Dependencies ###
 
 * [geom.js](https://github.com/eweitnauer/geom.js)

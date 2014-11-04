@@ -5,7 +5,7 @@ var scale = 4
   , simulator
   , sn, ps // SceneNode, PhysicsScene
   , interactor
-  , attr = 'small'
+  , attr = 'is_supported'
   , attr_getter = get_attr_getter(attr);
 
 function init() {
@@ -23,7 +23,7 @@ function init() {
   info_div = d3.select('body')
     .append('div')
     .classed('info', true);
-  loadSVG('./scene.svg');
+  loadSVG('./3-2.svg');
 
   interactor = new SceneInteractor(ps, sn, svg.node(), 100*scale);
   interactor.scaling(scale);
@@ -79,9 +79,18 @@ function createFeatureButtons(div_el, click_callback) {
 
 function onSelection(last, all) {
 	if (!last) return;
-	info_div.html('activity of "'+attr+'": ' + Math.round(attr_getter(last))
+	info_div.html('activity of "'+last.get(attr).get_label()+'": ' + Math.round(attr_getter(last))
 		           +"%<br/><br/>Summary "
 		           +last.describe());
+	// toggleBodyType(last.obj.phys_obj);
+}
+
+function toggleBodyType(body) {
+	if (body.GetType() === Box2D.Dynamics.b2Body.b2_dynamicBody) {
+		body.SetType(Box2D.Dynamics.b2Body.b2_staticBody);
+	} else {
+		body.SetType(Box2D.Dynamics.b2Body.b2_dynamicBody);
+	}
 }
 
 function get_attr_getter(attr) {
@@ -105,6 +114,6 @@ function loadSVG(path) {
   ps = new s2p.PhysicsScene(world);
   sn = new SceneNode(scene, new s2p.PhysicsOracle(ps));
   sn.registerObjects();
-  sn.oracle.gotoState('start');
+  //sn.oracle.gotoState('start');
   //sn.perceiveAll();
 }
